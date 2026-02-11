@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RetailMart Analytics Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="spinner"></div>
+      <p>Loading dashboard...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1>🛒 RetailMart Analytics</h1>
+        <span class="subtitle">Enterprise Analytics Platform</span>
+      </div>
+      <div class="header-right">
+        <span class="freshness-text">Loading...</span>
+        <button id="alertBadge" class="btn btn-alert">
+          🔔 <span class="alert-count">0</span>
+        </button>
+        <button id="btnRefresh" class="btn btn-primary">🔄 Refresh</button>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="executive">📊 Executive</button>
+      <button class="tab-btn" data-tab="sales">💰 Sales</button>
+      <button class="tab-btn" data-tab="customers">👥 Customers</button>
+      <button class="tab-btn" data-tab="products">📦 Products</button>
+      <button class="tab-btn" data-tab="stores">🏪 Stores</button>
+      <button class="tab-btn" data-tab="operations">🚚 Operations</button>
+      <button class="tab-btn" data-tab="marketing">📢 Marketing</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Executive Tab -->
+      <section id="tab-executive" class="tab-content active">
+        <div class="kpi-cards">
+          <div class="kpi-card" id="kpiTotalRevenue">
+            <div class="kpi-icon">💰</div>
+            <div class="kpi-label">Total Revenue</div>
+            <div class="kpi-value">--</div>
+            <div class="kpi-change">--</div>
+          </div>
+          <div class="kpi-card" id="kpiTotalOrders">
+            <div class="kpi-icon">📦</div>
+            <div class="kpi-label">Total Orders</div>
+            <div class="kpi-value">--</div>
+            <div class="kpi-change">--</div>
+          </div>
+          <div class="kpi-card" id="kpiTotalCustomers">
+            <div class="kpi-icon">👥</div>
+            <div class="kpi-label">Total Customers</div>
+            <div class="kpi-value">--</div>
+          </div>
+          <div class="kpi-card" id="kpiAvgOrderValue">
+            <div class="kpi-icon">🛒</div>
+            <div class="kpi-label">Avg Order Value</div>
+            <div class="kpi-value">--</div>
+          </div>
+        </div>
+        <div class="charts-grid">
+          <div class="chart-card large">
+            <h3>📈 Revenue Trend (Last 12 Months)</h3>
+            <canvas id="chartRevenueTrend"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>🥧 Revenue by Category</h3>
+            <canvas id="chartCategoryRevenue"></canvas>
+          </div>
+        </div>
+        <div class="tables-grid">
+          <div class="table-card">
+            <h3>🏆 Top 10 Products</h3>
+            <table id="tableTopProducts">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Revenue</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="table-card">
+            <h3>⭐ Top 10 Customers</h3>
+            <table id="tableTopCustomers">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Customer</th>
+                  <th>City</th>
+                  <th>Total Spent</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sales Tab -->
+      <section id="tab-sales" class="tab-content">
+        <div class="charts-grid">
+          <div class="chart-card large">
+            <h3>📅 Daily Sales (Last 30 Days)</h3>
+            <canvas id="chartDailySales"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>📆 Sales by Day of Week</h3>
+            <canvas id="chartDayOfWeek"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>💳 Payment Methods</h3>
+            <canvas id="chartPaymentModes"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>📊 Quarterly Performance</h3>
+            <canvas id="chartQuarterly"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customers Tab -->
+      <section id="tab-customers" class="tab-content">
+        <div class="charts-grid">
+          <div class="chart-card">
+            <h3>🎯 RFM Segments</h3>
+            <canvas id="chartRFMSegments"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>💎 CLV Tier Distribution</h3>
+            <canvas id="chartCLVTiers"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>👤 Demographics</h3>
+            <canvas id="chartDemographics"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>⚠️ Churn Risk Distribution</h3>
+            <canvas id="chartChurnRisk"></canvas>
+          </div>
+        </div>
+        <div class="table-card">
+          <h3>🚨 High-Priority Churn Risk Customers</h3>
+          <table id="tableChurnRisk">
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Tier</th>
+                <th>Total Spent</th>
+                <th>Inactive</th>
+                <th>Recommended Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Products Tab -->
+      <section id="tab-products" class="tab-content">
+        <div class="charts-grid">
+          <div class="chart-card large">
+            <h3>🏆 Top Products by Revenue</h3>
+            <canvas id="chartTopProductsBar"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>📊 ABC Analysis</h3>
+            <canvas id="chartABCPie"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>📈 Category Performance</h3>
+            <canvas id="chartCategoryPerformance"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>📦 Inventory Status</h3>
+            <canvas id="chartInventoryStatus"></canvas>
+          </div>
+        </div>
+        <div class="table-card">
+          <h3>📋 Product Details</h3>
+          <table id="tableProductDetails">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Brand</th>
+                <th>Revenue</th>
+                <th>Units</th>
+                <th>Rating</th>
+                <th>Stock</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Stores Tab -->
+      <section id="tab-stores" class="tab-content">
+        <div class="charts-grid">
+          <div class="chart-card large">
+            <h3>🌍 Regional Performance</h3>
+            <canvas id="chartRegionalPerformance"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>🏪 Store Rankings</h3>
+            <canvas id="chartStoreRankings"></canvas>
+          </div>
+        </div>
+        <div class="table-card">
+          <h3>📊 Store Scorecard</h3>
+          <table id="tableStoreScorecard">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Store</th>
+                <th>City</th>
+                <th>Region</th>
+                <th>Revenue</th>
+                <th>Profit</th>
+                <th>Margin</th>
+                <th>Tier</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Operations Tab -->
+      <section id="tab-operations" class="tab-content">
+        <div class="kpi-cards">
+          <div class="kpi-card" id="kpiOnTimeDelivery">
+            <div class="kpi-icon">✅</div>
+            <div class="kpi-label">On-Time Delivery</div>
+            <div class="kpi-value">--</div>
+          </div>
+          <div class="kpi-card" id="kpiAvgDeliveryDays">
+            <div class="kpi-icon">⏱️</div>
+            <div class="kpi-label">Avg Delivery Days</div>
+            <div class="kpi-value">--</div>
+          </div>
+          <div class="kpi-card" id="kpiReturnRate">
+            <div class="kpi-icon">↩️</div>
+            <div class="kpi-label">Returns</div>
+            <div class="kpi-value">--</div>
+          </div>
+          <div class="kpi-card" id="kpiTotalRefunds">
+            <div class="kpi-icon">💸</div>
+            <div class="kpi-label">Total Refunds</div>
+            <div class="kpi-value">--</div>
+          </div>
+        </div>
+        <div class="charts-grid">
+          <div class="chart-card large">
+            <h3>📈 Delivery SLA Trend</h3>
+            <canvas id="chartDeliverySLA"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>🚚 Courier Performance</h3>
+            <canvas id="chartCourierPerformance"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>🔄 Return Reasons</h3>
+            <canvas id="chartReturnReasons"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>📦 Returns by Category</h3>
+            <canvas id="chartReturnByCategory"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marketing Tab -->
+      <section id="tab-marketing" class="tab-content">
+        <div class="charts-grid">
+          <div class="chart-card large">
+            <h3>📊 Campaign ROI</h3>
+            <canvas id="chartCampaignROI"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>📢 Channel Performance</h3>
+            <canvas id="chartChannelPerformance"></canvas>
+          </div>
+        </div>
+        <div class="table-card">
+          <h3>📋 Campaign Details</h3>
+          <table id="tableCampaigns">
+            <thead>
+              <tr>
+                <th>Campaign</th>
+                <th>Status</th>
+                <th>Budget</th>
+                <th>Spend</th>
+                <th>Clicks</th>
+                <th>Conversions</th>
+                <th>Conv %</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Alert Modal -->
+    <div id="alertModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🔔 Active Alerts</h2>
+          <button id="closeModal" class="btn-close">&times;</button>
+        </div>
+        <div id="alertModalBody" class="modal-body">
+          <!-- Alert items will be populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span id="footerTimestamp">RetailMart Analytics | SQL Bootcamp</span>
+    </footer>
+
+    <!-- Dashboard JS -->
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

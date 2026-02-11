@@ -1,0 +1,34 @@
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "retailmart_analytics" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "retailmart_analytics" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "retailmart_analytics" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "retailmart_analytics" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "retailmart_analytics" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "retailmart_analytics" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied

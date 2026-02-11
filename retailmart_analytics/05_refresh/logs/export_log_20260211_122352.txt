@@ -1,0 +1,33 @@
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "accio_retailmart_23" does not exist
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
