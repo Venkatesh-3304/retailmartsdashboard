@@ -255,3 +255,18 @@ This project demonstrates mastery of:
 ---
 
 ⭐ If you found this project helpful, please give it a star!
+
+## 👥 Contributors
+
+This project was built collaboratively by:
+
+
+- **Venkatesh Ravva ([@Venkatesh-3304](https://github.com/Venkatesh-3304))** — PostgreSQL/PLpgSQL analytics layer, views/materialized views, refresh logic, data-quality checks, documentation
+- **Likhitha Sai Edupalli ([@Lali182k5](https://github.com/Lali182k5))** — Interactive dashboard (UI), frontend integration, deployment to production (Vercel) 
+
+## 🙌 Credits
+
+If you use or reference this project, please credit both contributors:
+- @Venkatesh-3304
+- @Lali182k5
+
